@@ -57,5 +57,4 @@ twitter_url:
 google_analytics: UA-119873288-1
 
 # The following settings are NECESSARY for the Prologue theme to run:
-theme: jekyll-theme-prologue
 collections: [sections]
