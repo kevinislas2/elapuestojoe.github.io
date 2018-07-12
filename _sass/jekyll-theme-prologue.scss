@@ -1142,3 +1142,17 @@
 		background: rgb(34,34,34); /* for IE */
 		background: rgba(34,34,34,0.75);
 	}
+	.center {
+		margin: auto;
+		
+	}
+	.white-background {
+		background-color: white;
+	}
+	.ziknet-graph {
+		background-color: rgba(130, 130, 130, 0.3);
+		max-width: 40%;
+	}
+	.ziknet-padding {
+		padding-top: 30px;
+	}

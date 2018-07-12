@@ -2,6 +2,7 @@
 layout: default
 ---
 {%- include header.html -%}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!-- Main -->
 <div id="main">
@@ -16,3 +17,13 @@ layout: default
 	  </div>
 	</article>
 </div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+	jQuery('.skillbar').each(function(){
+		jQuery(this).find('.skillbar-bar').animate({
+			width:jQuery(this).attr('data-percent')
+		},6000);
+	});
+});
+</script>

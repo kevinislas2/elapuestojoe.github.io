@@ -1,40 +1,47 @@
 ---
 title: Portfolio
-icon: fa-th
+icon: fa-suitcase
 order: 2
 ---
-
-<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-  egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-  Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-  fusce hendrerit lacus ridiculus.</p>
 
   <div class="row">
     <div class="4u 12u$(mobile)">
       <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic02.jpg' | relative_url }}" alt="Ipsum Feugiat" /></a>
+        <a href="https://ziknet-trends.herokuapp.com/" class="image fit"><img src="{{ 'assets/images/portfolio/Mato-Grosso_10-01-2015-20-02-2016.png' | relative_url }}" alt="Ziknet-Trends" /></a>
         <header>
-          <h3>Ipsum Feugiat</h3>
+          <h3><a href="https://ziknet-trends.herokuapp.com/" target="_blank">Ziknet-Trends:</a><br> Predict Zika epidemics using LSTM networks</h3>
         </header>
       </div>
       <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic03.jpg' | relative_url }}" alt="Rhoncus Semper" /></a>
+        <a href="https://itunes.apple.com/es/app/god%C3%ADnez-adventure/id1068615555?mt=8" class="image fit" target="_blank">
+          <img src="{{ 'assets/images/Godinez2.jpg' | relative_url }}" alt="Rhoncus Semper" />
+        </a>
         <header>
-          <h3>Rhoncus Semper</h3>
+          <h3>Godinez Adventure (iOS)</h3>
         </header>
       </div>
     </div>
     <div class="4u 12u$(mobile)">
-      <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic04.jpg' | relative_url }}" alt="Magna Nullam" /></a>
+      <div class="item white-background">
+
+        <div class="ziknet-padding">
+          <div id="graph-cb5e7954-9c20-4141-9a18-6c8d1b4a19a8" class="center ziknet-graph">           
+          </div>
+        </div>
+  
         <header>
-          <h3>Magna Nullam</h3>
+          <h3><a href="https://github.com/elapuestojoe/ziknet-epidemics" target="_blank">Ziknet-Epidemics:</a><br>
+            Simulate Zika epidemics using an Agent Based Simulation System (<a href="http://chipdelmal.github.io/SoNA3BS/index.html" target="_blank">SoNA3BS</a>)
+          </h3>
         </header>
       </div>
       <div class="item">
-        <a href="#" class="image fit"><img src="{{ 'assets/images/pic05.jpg' | relative_url }}" alt="Natoque Vitae" /></a>
+        <a href="#" class="image fit"><img src="{{ 'assets/images/FurnitureClassifier.png' | relative_url }}" alt="Natoque Vitae" /></a>
         <header>
-          <h3>Natoque Vitae</h3>
+          <h3><a href="https://github.com/elapuestojoe/FurnitureClassifier" target="_blank">Furniture Classifier</a><br>
+            Furniture image classifier using Deep Learning
+          </h3>
+
         </header>
       </div>
     </div>
@@ -42,7 +49,9 @@ order: 2
       <div class="item">
         <a href="#" class="image fit"><img src="{{ 'assets/images/pic06.jpg' | relative_url }}" alt="Dolor Penatibus" /></a>
         <header>
-          <h3>Dolor Penatibus</h3>
+          <h3>Ziknet-Epidemics: <br>
+            Simulate Zika epidemics using Agent-Based simulation
+          </h3>
         </header>
       </div>
       <div class="item">
@@ -53,3 +62,133 @@ order: 2
       </div>
     </div>
   </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<script type="text/javascript">
+  require.config({baseUrl: '/',
+                   paths: {jgraph: ['nbextensions/jgraph.min', 'https://rawgit.com/patrickfuller/jgraph/master/js/build/jgraph.min']}});
+  require(['jgraph'], function () {
+     var $d = $('#graph-cb5e7954-9c20-4141-9a18-6c8d1b4a19a8');
+     $d.width(400); $d.height(300);
+     $d.jgraph = jQuery.extend({}, jgraph);
+     $d.jgraph.create($d, {nodeSize: 2.000000,
+                           edgeSize: 0.250000,
+                           defaultNodeColor: '0x5bc0de',
+                           defaultEdgeColor: '0xaaaaaa',
+                           shader: 'basic',
+                           z: 200,
+                           runOptimization: true,
+                           directed: true,
+                           showSave: false});
+               $d.jgraph.draw({
+    "edges": [
+        { "color": "0x0", "source": "bn", "target": "ah" },
+        { "color": "0x0", "source": "bn", "target": "cb" },
+        { "color": "0x0", "source": "bv", "target": "bw" },
+        { "color": "0x0", "source": "bv", "target": "cg" },
+        { "color": "0x0", "source": "cc", "target": "cj" },
+        { "color": "0x0", "source": "cj", "target": "ag" },
+        { "color": "0x0", "source": "ck", "target": "bn" },
+        { "color": "0x0", "source": "ck", "target": "bc" },
+        { "color": "0x0", "source": "ck", "target": "bv" },
+        { "color": "0x0", "source": "ck", "target": "ai" },
+        { "color": "0x0", "source": "ck", "target": "by" },
+        { "color": "0x0", "source": "bn", "target": "ah" },
+        { "color": "0x0", "source": "bn", "target": "cb" },
+        { "color": "0x0", "source": "bv", "target": "bw" },
+        { "color": "0x0", "source": "bv", "target": "cg" },
+        { "color": "0x0", "source": "cc", "target": "cj" },
+        { "color": "0x0", "source": "cj", "target": "ag" },
+        { "color": "0x0", "source": "ck", "target": "bn" },
+        { "color": "0x0", "source": "ck", "target": "bc" },
+        { "color": "0x0", "source": "ck", "target": "bv" },
+        { "color": "0x0", "source": "ck", "target": "ai" },
+        { "color": "0x0", "source": "ck", "target": "by" },
+        { "color": "0x0", "source": "bn", "target": "ah" },
+        { "color": "0x0", "source": "bn", "target": "cb" },
+        { "color": "0x0", "source": "bv", "target": "bw" },
+        { "color": "0x0", "source": "bv", "target": "cg" },
+        { "color": "0x0", "source": "cc", "target": "cj" },
+        { "color": "0x0", "source": "cj", "target": "ag" },
+        { "color": "0x0", "source": "ck", "target": "bn" },
+        { "color": "0x0", "source": "ck", "target": "bc" },
+        { "color": "0x0", "source": "ck", "target": "bv" },
+        { "color": "0x0", "source": "ck", "target": "ai" },
+        { "color": "0x0", "source": "ck", "target": "by" }
+    ],
+    "nodes": {
+        "aa": { "color": "0xc853", "size": 2.0 },
+        "ab": { "color": "0xc853", "size": 2.0 },
+        "ac": { "color": "0xc853", "size": 2.0 },
+        "ad": { "color": "0xc853", "size": 2.0 },
+        "ae": { "color": "0xc853", "size": 2.0 },
+        "af": { "color": "0xc853", "size": 2.0 },
+        "ag": { "color": "0x2962ff", "size": 2.0 },
+        "ah": { "color": "0x2962ff", "size": 2.0 },
+        "ai": { "color": "0x2962ff", "size": 2.0 },
+        "aj": { "color": "0xc853", "size": 2.0 },
+        "ak": { "color": "0xc853", "size": 2.0 },
+        "al": { "color": "0xc853", "size": 2.0 },
+        "am": { "color": "0xc853", "size": 2.0 },
+        "an": { "color": "0xc853", "size": 2.0 },
+        "ao": { "color": "0xc853", "size": 2.0 },
+        "ap": { "color": "0xc853", "size": 2.0 },
+        "aq": { "color": "0xc853", "size": 2.0 },
+        "ar": { "color": "0xc853", "size": 2.0 },
+        "as": { "color": "0xc853", "size": 2.0 },
+        "at": { "color": "0xc853", "size": 2.0 },
+        "au": { "color": "0xc853", "size": 2.0 },
+        "av": { "color": "0xc853", "size": 2.0 },
+        "aw": { "color": "0x2962ff", "size": 2.0 },
+        "ax": { "color": "0xc853", "size": 2.0 },
+        "ay": { "color": "0xc853", "size": 2.0 },
+        "ba": { "color": "0xc853", "size": 2.0 },
+        "bb": { "color": "0xc853", "size": 2.0 },
+        "bc": { "color": "0x2962ff", "size": 2.0 },
+        "bd": { "color": "0xc853", "size": 2.0 },
+        "be": { "color": "0xc853", "size": 2.0 },
+        "bf": { "color": "0xc853", "size": 2.0 },
+        "bg": { "color": "0xc853", "size": 2.0 },
+        "bh": { "color": "0xc853", "size": 2.0 },
+        "bi": { "color": "0xc853", "size": 2.0 },
+        "bj": { "color": "0xc853", "size": 2.0 },
+        "bk": { "color": "0xc853", "size": 2.0 },
+        "bl": { "color": "0xc853", "size": 2.0 },
+        "bm": { "color": "0xc853", "size": 2.0 },
+        "bn": { "color": "0x2962ff", "size": 2.0 },
+        "bo": { "color": "0xc853", "size": 2.0 },
+        "bp": { "color": "0xc853", "size": 2.0 },
+        "bq": { "color": "0xc853", "size": 2.0 },
+        "br": { "color": "0xc853", "size": 2.0 },
+        "bs": { "color": "0xc853", "size": 2.0 },
+        "bt": { "color": "0xc853", "size": 2.0 },
+        "bu": { "color": "0xc853", "size": 2.0 },
+        "bv": { "color": "0x2962ff", "size": 2.0 },
+        "bw": { "color": "0x2962ff", "size": 2.0 },
+        "bx": { "color": "0xc853", "size": 2.0 },
+        "by": { "color": "0x2962ff", "size": 2.0 },
+        "bz": { "color": "0xc853", "size": 2.0 },
+        "ca": { "color": "0xc853", "size": 2.0 },
+        "cb": { "color": "0xf57f17", "size": 2.0 },
+        "cc": { "color": "0x2962ff", "size": 2.0 },
+        "cd": { "color": "0xc853", "size": 2.0 },
+        "ce": { "color": "0xc853", "size": 2.0 },
+        "cf": { "color": "0xc853", "size": 2.0 },
+        "cg": { "color": "0xd50000", "size": 2.0 },
+        "ch": { "color": "0xc853", "size": 2.0 },
+        "ci": { "color": "0xc853", "size": 2.0 },
+        "cj": { "color": "0x2962ff", "size": 2.0 },
+        "ck": { "color": "0x2962ff", "size": 2.0 }
+    }
+});
+
+               $d.resizable({
+                   aspectRatio: 2000 / 800,
+                   resize: function (evt, ui) {
+                       $d.jgraph.renderer.setSize(ui.size.width,
+                                                  ui.size.height);
+                   }
+               });
+           });
+</script>
