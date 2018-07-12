@@ -1,23 +1,10 @@
 ---
 title: Programming Languages
-subtitle: Main programming languages I've used
+subtitle: Main programming languages I've used.
 layout: "page"
 icon: fa-terminal
-order: 3
+order: 2
 ---
-
-<!-- ### Mobile Development
-- Objective-C
-- Java
-- Swift
-
-
-### Web Development 
-- Node.js
-
-### Machine Learning
-- Tensorflow
-- Keras -->
 
 <div class="skillbar clearfix " data-percent="85%">
 	<div class="skillbar-title" style="background: #3E7BAC;"><span>Python</span></div>
@@ -50,7 +37,7 @@ order: 3
 </div> <!-- End Skill Bar -->
 
 <div class="skillbar clearfix " data-percent="55%">
-	<div class="skillbar-title" style="background: #034282;"><span>C</span></div>
+	<div class="skillbar-title" style="background: #034282;"><span>C / C++</span></div>
 	<div class="skillbar-bar" style="background: #659BD2;"></div>
 	<div class="skill-bar-percent">55%</div>
 </div> <!-- End Skill Bar -->
