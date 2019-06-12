@@ -1,4 +1,1 @@
-/_site
-*.gem
-.sass-cache
-Gemfile.lock
+node_modules/

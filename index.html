@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kevin Islas</title>
+    <link rel="stylesheet" href="dist/bundle-index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+        integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+        crossorigin=""></script>
+
+    <!-- animate on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="home mdc-typography">
+    <aside class="mdc-drawer kevinislas-drawer">
+        <div class="mdc-drawer__header">
+            <img src="assets/kevinislas.jpg" alt="Kevin Islas" height="100" width="100">
+            <h1 class="kevinislas-title">Kevin Islas</h1>
+            <h1 class="kevinislas-subtitle">MsC in Computer Science</h1>
+        </div>
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" tabindex="0" href="#home">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                    <span class="mdc-list-item__text">Home</span>
+                </a>
+                <a class="mdc-list-item" href="#portfolio">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">computer</i>
+                    <span class="mdc-list-item__text">Portfolio</span>
+                </a>
+                <a class="mdc-list-item" href="#work">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">work</i>
+                    <span class="mdc-list-item__text">Work Experience</span>
+                </a>
+                <a class="mdc-list-item" href="#openSourceSoftware">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">code</i>
+                    <span class="mdc-list-item__text">Open Source Software</span>
+                </a>
+                <a class="mdc-list-item" href="#education">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">school</i>
+                    <span class="mdc-list-item__text">Education</span>
+                </a>
+                <a class="mdc-list-item" href="#awards">
+                    <i class="material-icons mdc-list-item__graphic fa fa-trophy fa-2x" aria-hidden="true"></i>
+                    <span class="mdc-list-item__text">Awards</span>
+                </a>
+                <a class="mdc-list-item" href="#contact">
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">contact_mail</i>
+                    <span class="mdc-list-item__text">Contact</span>
+                </a>
+            </nav>
+
+            <div class="icon-bar">
+                <a href="https://www.linkedin.com/in/kevinislas/" target="_blank" class="linkedin"><i
+                        class="fa fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/elapuestojoe/" target="_blank" class="github"><i
+                        class="fa fa-github fa-2x"></i></a>
+            </div>
+        </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+    <div class="kevinislas-body">
+        <header class="mdc-top-app-bar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <a class="material-icons mdc-top-app-bar__navigation-icon" id="kevinislas-navigation-icon">menu</a>
+                    <span class="mdc-top-app-bar__title">Kevin Islas</span>
+                </section>
+            </div>
+        </header>
+        <div class="main-content">
+            <div id="home" class="kevinislas-home kevinislas-navigationLink">
+                <h1>Home</h1>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                            <div class="mdc-card card-center">
+                                <h2 class="mdc-typography mdc-typography--headline6">Welcome to my personal website!
+                                </h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/kevinislas.jpg&quot;);">
+                                </div>
+                                <p class="cardText">I am a Computer Systems Engineer from Mexico
+                                    City.<br>I have mainly worked developing mobile applications, but between 2017-2019
+                                    that I got a
+                                    Master's degree in Computer Science I have focused in Machine Learning and
+                                    Bioinformatics.<br>I am
+                                    currently working in a GUI application for developing neural network models using
+                                    Tensorflow.js.
+                                    This project is in a very early stage, but you can read more about it <a
+                                        href="https://github.com/elapuestojoe/Wakanda/settings">here.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="portfolio" class="kevinislas-portfolio kevinislas-navigationLink">
+                <h1>Portfolio</h1>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div class="mdc-card" data-aos="flip-up" data-aos-delay="50" data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Ziknet-Trends</h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/Ziknet-Trends.png&quot;);"></div>
+                                <p class="cardText">Predict Zika epidemics using LSTM networks.</p>
+                                <div class="mdc-card__actions">
+                                    <a href="http://www.ziknet-trends.com/" target="_blank"
+                                        class="mdc-button mdc-card__action mdc-card__action--button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div class="mdc-card" data-aos="flip-up" data-aos-delay="250" data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Ziknet-Epidemics</h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/3dViz.png&quot;);"></div>
+                                <p class="cardText">Predict Zika epidemics using LSTM networks.</p>
+                                <div class="mdc-card__actions">
+                                    <a href="https://github.com/elapuestojoe/ziknet-epidemics" target="_blank"
+                                        class="mdc-button mdc-card__action mdc-card__action--button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div class="mdc-card" data-aos="flip-up" data-aos-delay="450" data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Cappuccino Chat</h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/CappuccinoLogo.png&quot;);"></div>
+                                <p class="cardText">Android dating app.</p>
+                                <div class="mdc-card__actions">
+                                    <a href="https://cappuccinochat.com/" target="_blank"
+                                        class="mdc-button mdc-card__action mdc-card__action--button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="work" class="kevinislas-workExperience kevinislas-navigationLink">
+                <h1>Work Experience</h1>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div id="workCard1" class="mdc-card" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Praxis</h2>
+                                <h3 class="mdc-typography mdc-typography--subtitle1">Mobile Development Engineer
+                                    (2015-2017)</h3>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/praxis-logo.jpg&quot;);">
+                                </div>
+                                <p class="cardText">As a Movile Developer at Praxis I mainly worked
+                                    developing iOS
+                                    and
+                                    Android mobile
+                                    applications, however, I also had the opportunity to work with backend
+                                    technologies
+                                    that supported some of our mobile apps. The main techonologies I used were Java
+                                    (Android and Backend), Objective-C (iOS), Swift(iOS), Node.js (Backend).</p>
+                            </div>
+                        </div>
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div id="workCard2" class="mdc-card" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Microsoft</h2>
+                                <h3 class="mdc-typography mdc-typography--subtitle1">Software Development Intern
+                                    (2016)
+                                </h3>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/Microsoft.png&quot;);">
+                                </div>
+                                <p class="cardText">As a summer intern at the Apex (Office for iOS) team, I worked
+                                    developing new features for iOS Office products using Objective-C. I developed
+                                    automated tests for the features that I implemented,
+                                    which shipped before my internship ended. I spent the final month of my internship
+                                    implementing various document management features.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="openSourceSoftware" class="kevinislas-openSourceSoftware kevinislas-navigationLink">
+                <h1>Open Source Software</h1>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div id="OSSCard1" class="mdc-card" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">CDC</h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/cdc.jpg&quot;);">
+                                </div>
+                                <p class="cardText">I contributed gathering data from the national
+                                    epidemiology
+                                    department in Mexico,
+                                    processing the data and outputting it into a csv file so other researchers can
+                                    use
+                                    it
+                                    more easily.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div id="OSSCard2" class="mdc-card" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Julia</h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/julia.png&quot;);">
+                                </div>
+                                <p class="cardText">I contributed by solving an Issue regarding a
+                                    function's input
+                                    parameters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="education" class="kevinislas-education kevinislas-navigationLink">
+                <h1>Education</h1>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div id="educationCard1" class="mdc-card" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Bachelor's Degree</h2>
+                                <h3 class="mdc-typography mdc-typography--subtitle1">B.E in Computer Systems
+                                    Engineering
+                                    (2012-2017)</h3>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/itesm.png&quot;);">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div id="educationCard2" class="mdc-card" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Master's Degree</h2>
+                                <h3 class="mdc-typography mdc-typography--subtitle1">M.Sc. in Computer Science
+                                    (2017-2019)</h3>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/itesm.png&quot;);">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="awards" class="kevinislas-awards kevinislas-navigationLink">
+                <h1>Awards</h1>
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div class="mdc-card" data-aos="fade-right" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Google Latin American Research
+                                    Awards 2017
+                                </h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/googleLatam2017.jpg&quot;);"></div>
+                                <p class="cardText">Predict Zika epidemics using LSTM networks.</p>
+                                <div class="mdc-card__actions">
+                                    <a href="http://www.ziknet-trends.com/" target="_blank"
+                                        class="mdc-button mdc-card__action mdc-card__action--button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
+                            <div class="mdc-card" data-aos="fade-left" data-aos-delay="50" data-aos-duration="500"
+                                data-aos-mirror="true">
+                                <h2 class="mdc-typography mdc-typography--headline6">Google Latin American Research
+                                    Awards 2018</h2>
+                                <div class="mdc-card__media mdc-card__media--square"
+                                    style="background-image: url(&quot;assets/googleLatam2018.jpg&quot;);"></div>
+                                <p class="cardText">Predict Zika epidemics using LSTM networks.</p>
+                                <div class="mdc-card__actions">
+                                    <a href="https://github.com/elapuestojoe/ziknet-epidemics" target="_blank"
+                                        class="mdc-button mdc-card__action mdc-card__action--button">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact" class="kevinislas-contact kevinislas-navigationLink">
+                <h1>Contact</h1>
+                <p class="sectionText">Feel free to send me an e-mail! I'll get back to you as soon as I can.</p>
+                <form method="post" action="https://formspree.io/kevin.islas.abud@gmail.com">
+                    <div class="mdc-layout-grid">
+                        <div class="mdc-layout-grid__inner">
+                            <div
+                                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                                <div class="mdc-text-field" data-aos="zoom-in" data-aos-duration="500">
+                                    <input type="text" id="name" name="name" class="mdc-text-field__input">
+                                    <label class="mdc-floating-label" for="name">Name:</label>
+                                    <div class="mdc-line-ripple"></div>
+                                </div>
+                            </div>
+                            <div
+                                class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-4-phone">
+                                <div class="mdc-text-field" data-aos="zoom-in" data-aos-duration="500">
+                                    <input type="text" id="email" name="email" class="mdc-text-field__input">
+                                    <label class="mdc-floating-label" for="email">Your email:</label>
+                                    <div class="mdc-line-ripple"></div>
+                                </div>
+                            </div>
+                            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                                <div class="mdc-text-field mdc-text-field--textarea" data-aos="zoom-in"
+                                    data-aos-duration="500">
+                                    <textarea id="message" class="mdc-text-field__input" rows="19" cols="40"
+                                        maxlength="2048" name="message"></textarea>
+                                    <div class="mdc-notched-outline">
+                                        <div class="mdc-notched-outline__leading"></div>
+                                        <div class="mdc-notched-outline__notch">
+                                            <label for="textarea" class="mdc-floating-label">Message:</label>
+                                        </div>
+                                        <div class="mdc-notched-outline__trailing"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                            <input id="submitBtn" class="mdc-button mdc-button--raised" type="submit"
+                                value="Send Email" />
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+        <div class="footer">
+            <p class="footerText">Design by Kevin Islas | Code available <a class="footerLink"
+                    href="https://github.com/elapuestojoe/elapuestojoe.github.io" target="_blank">@Github</a></p>
+        </div>
+    </div>
+    <script src="dist/bundle-index.js" async></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
