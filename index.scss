@@ -1,0 +1,219 @@
+@import "./variables";
+
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+@import "@material/button/mdc-button";
+@import "@material/typography/mdc-typography";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/card/mdc-card";
+@import "@material/animation/functions";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/textfield/mdc-text-field";
+@import "@material/layout-grid/mdc-layout-grid";
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+  padding-top: 0.1px; // Prevent header h1 margin from pushing body down
+  // display: flex; // Removes top gap between modal drawer and viewport
+}
+
+.home {
+  display: flex; // Flexbox is used to easily arrange the persistent drawer and content side-by-side
+}
+
+.kevinislas-logo-drawer {
+  display: block;
+  width: 48px;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+.kevinislas-title {
+  @include mdc-typography(headline6);
+
+  text-align: center;
+  margin: 5px auto;
+}
+
+.kevinislas-subtitle {
+  @include mdc-typography(subtitle2);
+  text-align: center;
+  margin: 5px auto;
+}
+
+.mdc-drawer__header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.kevinislas-body {
+  @include mdc-elevation(4);
+  width: 100%;
+  display: block;
+  margin-left: 255px;
+  // overflow: auto;
+  z-index: 0; // Elevate over the drawer
+}
+
+.mdc-drawer__header img {
+  border-radius: 50%;
+}
+
+.kevinislas-card {
+  height: 300px;
+  width: 600px;
+}
+
+.demo-card__primary h2,
+.demo-card__primary h3 {
+  padding-left: 20px;
+}
+
+@keyframes fade-in {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// BREAKPOINT min-width:900px
+
+#kevinislas-navigation-icon {
+  display: none;
+}
+
+// BREAKPOINT max-width:900px
+
+@media (max-width: 900px) {
+  #kevinislas-navigation-icon {
+    display: block;
+  }
+  .kevinislas-body {
+    margin-left: 0px;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.mdc-text-field {
+  @include mdc-text-field-fill-color(#F5F5FF);
+  width: 100%;
+  margin: 0 auto;
+}
+
+#submitBtn {
+  margin: 16px 0;
+  float: right;
+}
+
+.mdc-card__media--square {
+  background-size: contain;
+  // max-width: 500px;
+  max-height: 400px;
+  text-align: center;
+}
+
+.mdc-card .mdc-typography--headline6,
+.mdc-card .mdc-typography--subtitle1 {
+  text-align: center;
+}
+
+.cardText {
+  @include mdc-typography(body1);
+  padding: 16px;
+  text-align: justify;
+}
+
+.icon-bar {
+  position: absolute;
+  bottom: 10px;
+  height: auto;
+  width: 255px;
+  text-align: center;
+}
+
+.icon-bar a {
+  margin: 0 5px;
+}
+
+.icon-bar a:hover {
+  opacity: 0.5;
+}
+
+.linkedin {
+  color: #0077b5;
+}
+
+.github {
+  color: #6e5494;
+}
+
+.kevinislas-navigationLink h1,
+.sectionText {
+  text-align: center;
+  margin: 32px 32px;
+}
+
+.info {
+  max-height: 20%;
+  max-width: 60%;
+  padding: 6px 8px;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+
+#graph-cb5e7954-9c20-4141-9a18-6c8d1b4a19a8 {
+  background-color: #0077b5;
+  height: inherit;
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  margin-top: 90px;
+  background-color: $mdc-theme-primary;
+  text-align: center;
+}
+
+.footerText {
+  @include mdc-typography(body2);
+  color: $mdc-theme-on-primary;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.kevinislas-drawer {
+  position: fixed;
+}
+
+.mdc-top-app-bar {
+  position: fixed;
+  width: 100%;
+}
+
+.main-content {
+  margin-top: 80px;
+}
+
+.footerLink:link,
+.footerLink:visited {
+  color: $mdc-theme-on-surface;
+}
