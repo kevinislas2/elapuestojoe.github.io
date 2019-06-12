@@ -18,7 +18,7 @@ const mainContentEl = document.querySelector('.main-content');
 // Text fields
 import { MDCTextField } from '@material/textfield';
 
-document.querySelectorAll('.mdc-text-field').forEach(textField => {
+document.querySelectorAll('.mdc-text-field').forEach(function (textField) {
     new MDCTextField(textField);
 });
 
@@ -34,16 +34,16 @@ const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
 // 
 console.log("Javascript initialized");
 
-const initModalDrawer = () => {
+const initModalDrawer = function () {
     drawerElement.classList.add("mdc-drawer--modal");
     const drawer = MDCDrawer.attachTo(drawerElement);
     drawer.open = false;
     topAppBar.setScrollTarget(mainContentEl);
-    topAppBar.listen('MDCTopAppBar:nav', () => {
+    topAppBar.listen('MDCTopAppBar:nav', function () {
         drawer.open = !drawer.open;
     });
 
-    listEl.addEventListener('click', (event) => {
+    listEl.addEventListener('click', function (event) {
         drawer.open = false;
     });
 }
@@ -55,7 +55,7 @@ if (window.matchMedia("(max-width: 900px)").matches) {
     list.wrapFocus = true;
 }
 
-const resizeHandler = () => {
+const resizeHandler = function () {
     if (window.matchMedia("(max-width: 900px)").matches) {
         initModalDrawer();
     } else {
@@ -64,7 +64,7 @@ const resizeHandler = () => {
 }
 window.addEventListener('resize', resizeHandler);
 
-document.querySelectorAll('.mdc-list a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('.mdc-list a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         window.autoScroll = true;
@@ -72,7 +72,7 @@ document.querySelectorAll('.mdc-list a[href^="#"]').forEach(anchor => {
 
         $('html, body').animate({
             scrollTop: pos
-        }, 800, 'swing', () => {
+        }, 800, 'swing', function () {
             window.autoScroll = false;
         });
     });
