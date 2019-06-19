@@ -23,24 +23,26 @@ function getStyleUse(bundleFilename) {
     ];
 }
 
-module.exports = {
-    entry: ['./index.js', './index.scss'],
-    output: {
-        filename: "bundle-index.js",
-        path: path.resolve(__dirname, 'dist')
-    },
-    module: {
-        rules: [{
-            test: /index.scss$/,
-            use: getStyleUse('bundle-index.css')
-        }],
-        loaders: [{
-            test: /index.js$/,
-            loader: 'babel-loader',
-            query: { presets: ['env'] }
-        }]
-    },
-    plugins: [
-        new UglifyJSPlugin()
-    ]
-}
+module.exports = [
+    {
+        entry: ['./index.js', './index.scss'],
+        output: {
+            filename: "bundle-index.js",
+            path: path.resolve(__dirname, 'dist')
+        },
+        module: {
+            rules: [{
+                test: /index.scss$/,
+                use: getStyleUse('bundle-index.css')
+            }],
+            loaders: [{
+                test: /index.js$/,
+                loader: 'babel-loader',
+                query: { presets: ['env'] }
+            }]
+        },
+        plugins: [
+            new UglifyJSPlugin()
+        ]
+    }
+]

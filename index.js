@@ -114,7 +114,20 @@ function matchContentSize() {
     } else {
         $('#OSSCard1').height($('#OSSCard2').height());
     }
+
+    if ($('#portfolioCard1').height() !== $('#portfolioCard2').height() || $('#portfolioCard1').height() !== $('#portfolioCard3').height() || $('#portfolioCard2').height() !== $('#portfolioCard3').height()) {
+        $('#portfolioCard1').height($('#portfolioCard2').height());
+        $('#portfolioCard3').height($('#portfolioCard2').height());
+    }
 }
 document.body.onresize = matchContentSize;
 
 document.body.onload = matchContentSize;
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('../service-worker.js')
+        .then(function () {
+            console.log("Service Worker Registered");
+        });
+}
